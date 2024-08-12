@@ -1,0 +1,15 @@
+.campaigns-container {
+    position: relative;
+    text-align: center;
+    color: white;
+  }
+
+.campaign-content {
+  position: absolute;
+  color: #313538;
+  background-color: white;
+  font-size: 3rem;
+  top: 30%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+}

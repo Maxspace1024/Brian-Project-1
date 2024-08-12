@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/profile.css">
+    <script src="js/config.js"></script>
+    <script src="js/profile.js"></script>
+    <title>STYLiSH</title>
+
+</head>
+<body>
+<header>
+    <nav class="topnav">
+        <div class="nav-left">
+            <a href="/index.html"><img src="assets/images/logo.png" alt="logo" height="40px"></a>
+            <ul>
+                <li><a href="/index.html?category=women">女裝</a></li>
+                <li><a href="/index.html?category=men">男裝</a></li>
+                <li><a href="/index.html?category=accessories">配件</a></li>
+            </ul>
+        </div>
+        <div class="item">
+            <div class="input-container">
+                <input type="text" placeholder="Enter text here">
+                <div style="display: inline-block;">
+                    <img id="btnsearch" class="imgbtn" src="assets/images/search.png" alt="logo" height="40px">
+                </div>
+            </div>
+            <div class="item">
+                <img id="btncart" class="imgbtn" src="assets/images/cart.png" alt="logo" height="40px">
+            </div>
+            <div class="item">
+                <a href="profile.html"><img id="btnmember" class="imgbtn" src="assets/images/member.png" alt="logo" height="40px"></a>
+            </div>
+        </div>
+    </nav>
+    <div class="blackline"></div>
+</header>
+<main>
+    <section class="profile-container">
+        <div id="profileBlock" class="container" style="display: none;">
+            <h2>Profile</h2>
+            <form>
+                <input id="pusername" type="text" name="username" placeholder="username" disabled>
+                <input id="paccount" type="text" name="account" placeholder="account" disabled>
+                <input id="ppicture" type="text" name="text" placeholder="picture URL" disabled>
+            </form>
+        </div>
+        <div id="loginBlock" class="container" style="display: none;">
+            <h2>Login</h2>
+            <form>
+                <input id="account" type="text" name="account" placeholder="account" required>
+                <input id="password" type="password" name="password" placeholder="password" required>
+                <button id="btnLogin" type="button" class="button">Login</button>
+            </form>
+            <a id="linkSignup" href="#" class="link">Sign Up</a>
+            <div id="loginStatus" style="color: red;"></div>
+        </div>
+        <div id="signupBlock" class="container" style="display: none;">
+            <h2>Sign Up</h2>
+            <form>
+                <input id="susername" type="text" name="username" placeholder="username" required>
+                <input id="saccount" type="text" name="account" placeholder="account" required>
+                <input id="spassword" type="password" name="password" placeholder="password" required>
+                <button id="btnSignup" type="button" class="button">Sign Up</button>
+            </form>
+            <div id="signupStatus" style="color: red;"></div>
+        </div>
+    </section>
+</main>
+<footer>
+    <nav class="footernav">
+        <div class="item">
+            <ul>
+                <li><a href="#">關於 STYLiSH</a></li>
+                <li><a href="#">服務條款</a></li>
+                <li><a href="#">隱私政策</a></li>
+                <li><a href="#">聯絡我們</a></li>
+                <li><a href="#">FAQ</a></li>
+            </ul>
+        </div>
+        <div class="item">
+            <img id="btnline" class="imgbtn" src="/assets/images/line.png" alt="line">
+        </div>
+        <div class="item">
+            <img id="btntwitter" class="imgbtn" src="/assets/images/twitter.png" alt="twitter">
+        </div>
+        <div class="item">
+            <img id="btnfacebook" class="imgbtn" src="/assets/images/facebook.png" alt="facebook">
+        </div>
+        <div class="item">
+            <span style="color: white;">&copy; 2024 All right reserved.</span>
+        </div>
+    </nav>
+</footer>
+</body>
+</html>

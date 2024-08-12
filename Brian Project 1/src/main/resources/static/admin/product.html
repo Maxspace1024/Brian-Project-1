@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Product Management</title>
+</head>
+<body>
+<h1>Create Product</h1>
+<form action="/api/product" method="post" enctype="multipart/form-data">
+    <div>
+        <label for="category">category</label>
+        <input id="category" name="category" type="text" value="def" required>
+    </div>
+    <div>
+        <label for="title">title</label>
+        <input id="title" name="title" type="text" value="def" required>
+    </div>
+    <div>
+        <label for="description">description</label>
+        <input id="description" name="description" type="text" value="def" required>
+    </div>
+    <div>
+        <label for="price">price</label>
+        <input id="price" name="price" type="number" value="2" required>
+    </div>
+    <div>
+        <label for="texture">texture</label>
+        <input id="texture" name="texture" type="text" value="def" required>
+    </div>
+    <div>
+        <label for="wash">wash</label>
+        <input id="wash" name="wash" type="text" value="def" required>
+    </div>
+    <div>
+        <label for="place">place</label>
+        <input id="place" name="place" type="text" value="def" required>
+    </div>
+    <div>
+        <label for="note">note</label>
+        <input id="note" name="note" type="text" value="def" required>
+    </div>
+    <div>
+        <label for="story">story</label>
+        <input id="story" name="story" type="text" value="def" required>
+    </div>
+    <div id="variantBlock">
+        <fieldset>
+            <div>
+                <label for="variants[0].size">size</label>
+                <input id="variants[0].size" name="variants[0].size" type="text" value="def" required>
+            </div>
+            <div>
+                <label for="variants[0].color_name">color_name</label>
+                <input id="variants[0].color_name" name="variants[0].color_name" type="text" value="def" required>
+                <label for="variants[0].color_code">color_code</label>
+                <input id="variants[0].color_code" name="variants[0].color_code" type="text" value="def" required>
+            </div>
+            <div>
+                <label for="variants[0].stock">stock</label>
+                <input id="variants[0].stock" name="variants[0].stock" type="number" value="1" required>
+            </div>
+        </fieldset>
+    </div>
+    <div>
+        <button id="addVariantBtn" type="button">add variant</button>
+    </div>
+    <div>
+        <label for="mainImage">main_image</label>
+        <input id="mainImage" name="mainImage" type="file" required>
+    </div>
+    <div>
+        <label for="images">images</label>
+        <input id="images" name="images" type="file" multiple required>
+    </div>
+    <button type="submit">submit</button>
+</form>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        let variantBlock = document.querySelector("#variantBlock");
+        let addVariantBtn = document.querySelector("#addVariantBtn");
+        let variantIndex = 1;
+
+        addVariantBtn.addEventListener("click", () => {
+            let variantBlockHTML = `
+            <fieldset>
+                <div>
+                    <label for="variants[${variantIndex}].size">size</label>
+                    <input id="variants[${variantIndex}].size" name="variants[${variantIndex}].size" type="text" value="def" required>
+                </div>
+                <div>
+                    <label for="variants[${variantIndex}].color_name">color_name</label>
+                    <input id="variants[${variantIndex}].color_name" name="variants[${variantIndex}].color_name" type="text" value="def" required>
+                    <label for="variants[${variantIndex}].color_code">color_code</label>
+                    <input id="variants[${variantIndex}].color_code" name="variants[${variantIndex}].color_code" type="text" value="def" required>
+                </div>
+                <div>
+                    <label for="variants[${variantIndex}].stock">stock</label>
+                    <input id="variants[${variantIndex}].stock" name="variants[${variantIndex}].stock" type="number" value="1" required>
+                </div>
+            </fieldset>
+            `
+            variantBlock.innerHTML += variantBlockHTML 
+            variantIndex += 1;   
+        })
+    })
+</script>
+</body>
+</html>

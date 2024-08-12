@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="login.css">
+    <script src="login.js"></script>
+</head>
+<body>
+<div class="container">
+    <h2>Login</h2>
+    <form>
+        <input type="text" name="username" placeholder="account" required>
+        <input type="password" name="password" placeholder="password" required>
+        <button type="submit" class="button">Login</button>
+    </form>
+    <a href="#" class="link">Sign Up</a>
+    <!--    <button class="button facebook-button">Login With Facebook</button>-->
+
+
+    <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+    </fb:login-button>
+
+    <div id="status">
+    </div>
+</div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
+</body>
+</html>

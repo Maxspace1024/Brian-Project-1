@@ -1,0 +1,109 @@
+.product-detail {
+    display: flex;
+    flex-direction: column;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+.product-container {
+    display: flex;
+    gap: 20px;
+}
+.product-image {
+    flex: 1;
+}
+.product-image img {
+    width: 100%;
+    height: auto;
+}
+.product-details {
+    flex: 1;
+}
+.color-options, .size-options {
+    display: flex;
+    margin:20px 0;
+    gap: 10px;
+}
+.color-option, .size-option {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+.size-option {
+    padding: auto;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.size-options, .quantity {
+    margin-top: 10px;
+}
+.button-order {
+    width:100%;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+/* select deselect */
+.selected-color-option {
+    border: 4px solid rgb(234, 186, 12);
+}
+.disabled-size-option {
+    background-color: #ccc;
+}
+.selected-size-option {
+    border: 4px solid rgb(234, 186, 12);
+    border-radius: 50%;
+}
+
+
+/* input digit */
+.number-input {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+}
+
+.number-input button {
+    width: 30px;
+    height: 30px;
+    border: none;
+    cursor: pointer;
+    /* background-color: #dbdbdb; */
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.number-input input {
+    width: 50px;
+    height: 30px;
+    text-align: center;
+    border: none;
+}
+
+.number-input input::-webkit-outer-spin-button,
+.number-input input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.number-input button:focus, .number-input input:focus {
+    outline: none;
+}
+/* input digit */
+
+/* receipt */
+.receipt-row {
+    display: flex;
+    justify-content: space-between;
+}
